@@ -1,14 +1,15 @@
 # jQuery.quicktip #
 
 Inspired by: Owain Lewis (www.Owainlewis.com)
+
 Author: Artūrs Mekšs
+
 This is small, simple and easy to use jQuery plugin for browser's default tooltip text replacement.
 Tooltip text can be defined as title attribute of parent element or as nested element (e.g. span)
 for more complex tip content, which may has HTML/CSS formatting
 
 ## Cross browser support ##
 
-Cross browser support:
 * FireFox 3.6 or later
 * Google Chrome 9 or later
 * Apple Safari 5 or later
