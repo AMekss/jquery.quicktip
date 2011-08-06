@@ -6,7 +6,7 @@ Author: Artūrs Mekšs
 
 This is small, simple and easy to use jQuery plugin for browser's default tooltip text replacement.
 Tooltip text can be defined as title attribute of parent element or as nested element (e.g. span)
-for more complex tip content, which may has HTML/CSS formatting
+for more complex tip content, which may has even HTML/CSS formatting
 
 ## Cross browser support ##
 
@@ -21,13 +21,16 @@ jQuery 1.4.3 or later
 
 ## How to use? ##
 
-1) Ensure that jQuery is available into your project
-2) Include quicktip's js and css files into your project
-3) Call $(selector).quicktip(options) once somewhere on page load
+1. Ensure that jQuery is available into your project
+2. Include quicktip's js and css files into your project
+3. Call `$(selector).quicktip(options)` once somewhere on page load
+
 Thats it, for every element which match selector defined in third step quicktip will be bind on the fly.
 And no matter does this element exist on page load or will appear later.
 
 ### Example ###
+
+Enable javascript hook
 
 ```javascript
 $(function(){
@@ -35,9 +38,18 @@ $(function(){
 });
 ```
 
+Write your HTML with no worries about the tips
+
 ```html
 ...
 <span class="tooltip" title="my custom tooltip">
+  mouse over here
+</span>
+...
+<span class="tooltip">
+  <span class="title any_additional_class" style="display: none">
+    <div class="style_me">my custom tooltip styled with HTML/CSS</div>
+  </span>
   mouse over here
 </span>
 ...
