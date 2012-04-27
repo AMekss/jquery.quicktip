@@ -34,6 +34,12 @@ describe("jQuery.QuickTip", function() {
       $("#tip_example_with_empty_text1").mouseover();
       expect($("#tooltip")).toHaveText("-");
     });
+
+    it("should be enable for elements which are inserted after DOM was loaded", function() {
+      $("body").append("<span id='inserted_tip_example' class='tooltip' title='some text' > mouse over here </span>");
+      $("#inserted_tip_example").mouseover();
+      expect($("#tooltip")).toHaveText("some text");
+    });
   });
 
   describe("testing with custom options", function() {
