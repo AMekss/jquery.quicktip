@@ -25,6 +25,10 @@ describe("jQuery.QuickTip", function() {
       expect($("#tooltip")).not.toExist();
     });
 
+    xit("should chane position on mouse move over the target", function() {
+      // TODO need to find good way how to simulate mousemove with coords
+    });
+
     it("should show tooltip from nested span with class title", function() {
       $("#tip_example_with_span1").mouseover();
       expect($("#tooltip")).toHaveText("test tooltip from span");
