@@ -63,7 +63,6 @@ describe("jQuery.QuickTip", function() {
     it("should be able to change css for tip", function() {
       $(".tooltip").quicktip({css: {color: "red", border: "1px solid green"}});
       $("#tip_example").mouseover();
-      console.log($("#tooltip"));
       expect($("#tooltip").attr("style")).toContain("1px solid green");
     });
 
