@@ -57,7 +57,7 @@ Write your HTML with no worries about the tips
 
 ## Options ##
 
-* speed - tooltip display timeout in ms (default: 250)
+* speed - tooltip animation (fade in/out) length in ms (default: 250), set to 0 to disable animation
 * xOffset - tooltip X offset from mouse pointer in px (default: 10)
 * yOffset - tooltip Y offset from mouse pointer in px (default: 10)
 * className - tooltip content selector if it defined as nested element (default: 'title')
