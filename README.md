@@ -63,7 +63,7 @@ Write your HTML with no worries about the tips
 * className - tooltip content selector if it defined as nested element (default: 'title')
 * altTip - alternate value if content of tooltip is empty (default: '-')
 * css - additional style for tooltip box (default: {})
-* cursor - mouse pointer style when mouseover DOM element containing tip (default: 'default')
+* cursor - mouse pointer style when mouseover DOM element containing tip (default: null)
 
 ## Licence ##
 
