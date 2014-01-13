@@ -16,7 +16,7 @@ describe("jQuery.QuickTip", function() {
       var scope = $("#tip_example").mouseover();
       expect($("#tooltip")).toBeVisible();
       expect($("#tooltip")).toHaveText("test tooltip");
-      expect(scope.css("cursor")).toEqual("default");
+      expect(scope.css("cursor")).toEqual("auto");
     });
 
     it("should hide on mouse out", function() {
