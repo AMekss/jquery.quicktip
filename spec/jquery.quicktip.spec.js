@@ -5,7 +5,6 @@ describe("jQuery.QuickTip", function() {
 
   beforeEach(function() {
     loadFixtures("test_example.html");
-    jasmine.Clock.useMock();
   });
 
   describe("testing with defaults", function(){
@@ -14,11 +13,13 @@ describe("jQuery.QuickTip", function() {
     });
 
     it("should show up on mouse over", function() {
+      jasmine.clock().install();
       var scope = $("#tip_example").mouseover();
-      jasmine.Clock.tick(1);
+      jasmine.clock().tick(1);
       expect($("#tooltip")).toBeVisible();
       expect($("#tooltip")).toHaveText("test tooltip");
       expect(scope.css("cursor")).toEqual("auto");
+      jasmine.clock().uninstall();
     });
 
     it("should hide on mouse out", function() {
@@ -82,6 +83,7 @@ describe("jQuery.QuickTip", function() {
     });
 
     it("should be able to delay tip's show", function() {
+      jasmine.clock().install();
       $(".tooltip").quicktip({delay: 500});
 
       $("#tip_example").mouseover();
@@ -89,10 +91,11 @@ describe("jQuery.QuickTip", function() {
       $("#tip_example_with_span1").mouseover();
       expect($("#tooltip")).not.toBeVisible();
 
-      jasmine.Clock.tick(501);
+      jasmine.clock().tick(501);
       expect($("#tooltip")).toBeVisible();
       expect($("#tooltip")).toHaveText("test tooltip from span");
-    })
+      jasmine.clock().uninstall();
+    });
 
   });
 });
